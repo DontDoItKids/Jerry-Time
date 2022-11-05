@@ -41,10 +41,12 @@
             // 
             // myBox
             // 
-            this.myBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.myBox.BackColor = System.Drawing.SystemColors.Control;
+            this.myBox.Image = global::Jerry_Time.Properties.Resources.Smiley;
             this.myBox.Location = new System.Drawing.Point(42, 164);
             this.myBox.Name = "myBox";
             this.myBox.Size = new System.Drawing.Size(80, 80);
+            this.myBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.myBox.TabIndex = 0;
             this.myBox.TabStop = false;
             this.myBox.Click += new System.EventHandler(this.myBox_Click);
@@ -58,7 +60,7 @@
             this.BottomSquare.BackColor = System.Drawing.Color.Red;
             this.BottomSquare.Location = new System.Drawing.Point(700, 297);
             this.BottomSquare.Name = "BottomSquare";
-            this.BottomSquare.Size = new System.Drawing.Size(100, 276);
+            this.BottomSquare.Size = new System.Drawing.Size(100, 153);
             this.BottomSquare.TabIndex = 1;
             this.BottomSquare.TabStop = false;
             // 
