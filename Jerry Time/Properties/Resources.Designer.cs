@@ -63,9 +63,39 @@ namespace Jerry_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pipe {
+            get {
+                object obj = ResourceManager.GetObject("Pipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Smiley {
             get {
                 object obj = ResourceManager.GetObject("Smiley", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TestBackground {
+            get {
+                object obj = ResourceManager.GetObject("TestBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UpsideDown_Pipe {
+            get {
+                object obj = ResourceManager.GetObject("UpsideDown Pipe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -7,22 +7,13 @@ namespace Jerry_Time
 
     public partial class Form1 : Form
     {
-        
-        bool showed = false;
-
         Random rndTop = new Random();
-        Random rndBottom = new Random();
 
-        private void ShowMessageBox(string message)
-        {
-            if (!showed)
-            {
-                MessageBox.Show(message);
-            }
-            showed = true;
-        }
-
-
+        int BBCord;
+        int TBCord;
+        int Distance;
+        int Score = 0;
+        
         public Form1()
         {
             InitializeComponent();
@@ -60,7 +51,12 @@ namespace Jerry_Time
                 BottomSquare.Left = 800;
                 BottomSquare.Height = 276;
 
-                BottomSquare.Height -= NewTop;
+                BottomSquare.Height += (NewTop - 0);
+                BottomSquare.Top += (NewTop - 0);
+
+                Score++;
+                
+                lblScore.Text = "Score: " + Score.ToString();
             }
 
            
@@ -73,12 +69,20 @@ namespace Jerry_Time
 
             //https://social.msdn.microsoft.com/Forums/en-US/2b815e39-da66-49dd-94b9-13384e424f3e/c-object-following-the-mouse?forum=csharplanguage
             Point mouse = PointToClient(MousePosition);
-            myBox.Location = new Point(mouse.X - 40, mouse.Y - 40);
+            myBox.Location = new Point(mouse.X - 30, mouse.Y - 30);
 
 
             //https://stackoverflow.com/questions/33846662/c-sharp-detect-picturebox-overlap
             bool overlapTop = myBox.Bounds.IntersectsWith(TopSquare.Bounds);
             bool overlapBottom = myBox.Bounds.IntersectsWith(BottomSquare.Bounds);
+
+
+            TBCord = TopSquare.Bottom;
+            BBCord = BottomSquare.Top;
+
+            Distance = BBCord - TBCord;
+            lblDistance.Text = Distance.ToString();
+
 
             if (overlapTop == true)
             {
@@ -97,11 +101,23 @@ namespace Jerry_Time
 
             }
 
+            if (Distance < 85)
+            {
+                BottomSquare.Top += 20;
+            }
+
+            if (Distance > 160)
+            {
+                BottomSquare.Top -= 20;
+            }
 
 
 
-            
-            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

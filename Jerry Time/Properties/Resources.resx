@@ -121,4 +121,13 @@
   <data name="Smiley" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Smiley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="UpsideDown Pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpsideDown Pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TestBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TestBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
