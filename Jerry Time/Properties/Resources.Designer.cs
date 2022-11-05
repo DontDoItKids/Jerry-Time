@@ -93,6 +93,16 @@ namespace Jerry_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TestBackground1 {
+            get {
+                object obj = ResourceManager.GetObject("TestBackground1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UpsideDown_Pipe {
             get {
                 object obj = ResourceManager.GetObject("UpsideDown Pipe", resourceCulture);

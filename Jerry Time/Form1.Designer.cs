@@ -36,6 +36,8 @@
             this.Collision = new System.Windows.Forms.Timer(this.components);
             this.lblDistance = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.myBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BottomSquare)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopSquare)).BeginInit();
@@ -60,7 +62,7 @@
             // 
             // BottomSquare
             // 
-            this.BottomSquare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BottomSquare.BackColor = System.Drawing.Color.Transparent;
             this.BottomSquare.BackgroundImage = global::Jerry_Time.Properties.Resources.Pipe;
             this.BottomSquare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BottomSquare.Location = new System.Drawing.Point(700, 295);
@@ -71,7 +73,7 @@
             // 
             // TopSquare
             // 
-            this.TopSquare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TopSquare.BackColor = System.Drawing.Color.Transparent;
             this.TopSquare.BackgroundImage = global::Jerry_Time.Properties.Resources.UpsideDown_Pipe;
             this.TopSquare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TopSquare.Location = new System.Drawing.Point(700, 0);
@@ -87,6 +89,7 @@
             // lblDistance
             // 
             this.lblDistance.AutoSize = true;
+            this.lblDistance.BackColor = System.Drawing.Color.Transparent;
             this.lblDistance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDistance.Location = new System.Drawing.Point(370, 389);
             this.lblDistance.Name = "lblDistance";
@@ -97,6 +100,7 @@
             // lblScore
             // 
             this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblScore.Location = new System.Drawing.Point(356, 410);
             this.lblScore.Name = "lblScore";
@@ -104,12 +108,38 @@
             this.lblScore.TabIndex = 4;
             this.lblScore.Text = "Score: 0";
             // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.Transparent;
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStart.Location = new System.Drawing.Point(200, 135);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(373, 169);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestart.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRestart.Location = new System.Drawing.Point(12, 12);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(197, 81);
+            this.btnRestart.TabIndex = 6;
+            this.btnRestart.Text = "Restart?";
+            this.btnRestart.UseVisualStyleBackColor = false;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 440);
+            this.Controls.Add(this.btnRestart);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblDistance);
             this.Controls.Add(this.myBox);
@@ -135,5 +165,7 @@
         private System.Windows.Forms.Timer Collision;
         private Label lblDistance;
         private Label lblScore;
+        private Button btnStart;
+        private Button btnRestart;
     }
 }

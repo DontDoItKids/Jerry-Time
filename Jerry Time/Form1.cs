@@ -18,10 +18,8 @@ namespace Jerry_Time
         {
             InitializeComponent();
 
-            PipesTimer.Enabled = true;
-            PipesTimer.Interval = 1;
-
-
+            btnRestart.Enabled = false;
+            btnRestart.Visible = false;
         }
 
         private void myBox_Click(object sender, EventArgs e)
@@ -57,9 +55,6 @@ namespace Jerry_Time
                 lblScore.Text = "Score: " + Score.ToString();
             }
 
-           
-           
-
         }
 
         private void Collision_Tick(object sender, EventArgs e)
@@ -88,15 +83,20 @@ namespace Jerry_Time
 
                 Collision.Enabled = false;
                 PipesTimer.Enabled = false;
+
+                btnRestart.Visible = true;
+                btnRestart.Enabled = true;
             }
 
             if (overlapBottom == true)
             {
                 myBox.Top = 380;
            
-               Collision.Enabled = false;
-               PipesTimer.Enabled = false;
+                Collision.Enabled = false;
+                PipesTimer.Enabled = false;
 
+                btnRestart.Visible = true;
+                btnRestart.Enabled = true;
             }
 
             if (Distance < 85)
@@ -116,6 +116,36 @@ namespace Jerry_Time
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            PipesTimer.Enabled = true;
+            PipesTimer.Interval = 1;
+
+            Collision.Enabled = true;
+            Collision.Interval = 1;
+
+            btnStart.Enabled = false;
+            btnStart.Visible = false;
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            TopSquare.Left = 800;
+            BottomSquare.Left = 800;
+
+            PipesTimer.Enabled = true;
+            PipesTimer.Interval = 1;
+
+            Collision.Enabled = true;
+            Collision.Interval = 1;
+
+            btnRestart.Enabled = false;
+            btnRestart.Visible = false;
+
+            Score = 0;
+            lblScore.Text = "Score: " + Score.ToString();
         }
     }
 }
