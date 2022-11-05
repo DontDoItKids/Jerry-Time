@@ -21,8 +21,6 @@ namespace Jerry_Time
             PipesTimer.Enabled = true;
             PipesTimer.Interval = 1;
 
-            Collision.Enabled = true;
-            Collision.Interval = 1;
 
         }
 
