@@ -144,7 +144,7 @@
             // 
             this.lblControls.AutoSize = true;
             this.lblControls.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblControls.Location = new System.Drawing.Point(303, 307);
+            this.lblControls.Location = new System.Drawing.Point(293, 307);
             this.lblControls.Name = "lblControls";
             this.lblControls.Size = new System.Drawing.Size(185, 21);
             this.lblControls.TabIndex = 7;
