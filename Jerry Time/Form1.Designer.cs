@@ -69,7 +69,7 @@
             this.BottomSquare.BackColor = System.Drawing.Color.Transparent;
             this.BottomSquare.BackgroundImage = global::Jerry_Time.Properties.Resources.Pipe;
             this.BottomSquare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BottomSquare.Location = new System.Drawing.Point(700, 295);
+            this.BottomSquare.Location = new System.Drawing.Point(700, 296);
             this.BottomSquare.Name = "BottomSquare";
             this.BottomSquare.Size = new System.Drawing.Size(100, 153);
             this.BottomSquare.TabIndex = 1;
