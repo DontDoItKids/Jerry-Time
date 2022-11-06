@@ -13,16 +13,13 @@ namespace Jerry_Time
         int TBCord;
         int Distance;
         int Score = 0;
+        int HighScore = 0;
+        
 
         Bitmap bmpSmile = new Bitmap("..\\..\\..\\Resources\\Smiley.png");
         Bitmap bmpUnSmile = new Bitmap ("..\\..\\..\\Resources\\UnSmiley.png");
         
-        //public SpaceBarPress()
-        //{
-
-
-        //    return;
-        //}
+        
 
         public Form1()
         {
@@ -60,9 +57,20 @@ namespace Jerry_Time
                 BottomSquare.Height += (NewTop - 0);
                 BottomSquare.Top += (NewTop - 0);
 
-                Score++;
                 
+                if (HighScore == Score)
+                {
+                    HighScore++;
+                    Score++;
+                }
+                else
+                {
+                    Score++;
+                }
+
                 lblScore.Text = "Score: " + Score.ToString();
+                lblHighScore.Text = "High Score: " + HighScore.ToString();
+
             }
 
         }
@@ -113,7 +121,7 @@ namespace Jerry_Time
                 myBox.Image = bmpUnSmile;
             }
 
-            if (Distance < 85)
+            if (Distance < 95)
             {
                 BottomSquare.Top += 20;
             }
@@ -149,6 +157,8 @@ namespace Jerry_Time
 
             btnStart.Enabled = false;
             btnStart.Visible = false;
+
+            lblControls.Visible = false;
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -182,12 +192,16 @@ namespace Jerry_Time
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            myBox.Top -= 30;
+            myBox.Top -= 32;
+            
         }
 
         private void Gravity_Tick(object sender, EventArgs e)
         {
-            myBox.Top += 1;
+            myBox.Top += 2;
+            
+
+            
         }
     }
 }

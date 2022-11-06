@@ -39,6 +39,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
             this.Gravity = new System.Windows.Forms.Timer(this.components);
+            this.lblControls = new System.Windows.Forms.Label();
+            this.lblHighScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.myBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BottomSquare)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopSquare)).BeginInit();
@@ -93,7 +95,7 @@
             this.lblDistance.AutoSize = true;
             this.lblDistance.BackColor = System.Drawing.Color.Transparent;
             this.lblDistance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDistance.Location = new System.Drawing.Point(370, 389);
+            this.lblDistance.Location = new System.Drawing.Point(371, 368);
             this.lblDistance.Name = "lblDistance";
             this.lblDistance.Size = new System.Drawing.Size(19, 21);
             this.lblDistance.TabIndex = 3;
@@ -104,7 +106,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblScore.Location = new System.Drawing.Point(356, 410);
+            this.lblScore.Location = new System.Drawing.Point(357, 389);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(65, 21);
             this.lblScore.TabIndex = 4;
@@ -114,7 +116,7 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.Transparent;
             this.btnStart.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStart.Location = new System.Drawing.Point(200, 335);
+            this.btnStart.Location = new System.Drawing.Point(200, 135);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(373, 169);
             this.btnStart.TabIndex = 5;
@@ -138,6 +140,27 @@
             // 
             this.Gravity.Tick += new System.EventHandler(this.Gravity_Tick);
             // 
+            // lblControls
+            // 
+            this.lblControls.AutoSize = true;
+            this.lblControls.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblControls.Location = new System.Drawing.Point(303, 307);
+            this.lblControls.Name = "lblControls";
+            this.lblControls.Size = new System.Drawing.Size(185, 21);
+            this.lblControls.TabIndex = 7;
+            this.lblControls.Text = "Space Is the Only Control";
+            // 
+            // lblHighScore
+            // 
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblHighScore.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHighScore.Location = new System.Drawing.Point(338, 410);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(102, 21);
+            this.lblHighScore.TabIndex = 8;
+            this.lblHighScore.Text = "High Score: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -145,6 +168,8 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 440);
+            this.Controls.Add(this.lblHighScore);
+            this.Controls.Add(this.lblControls);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblScore);
@@ -177,5 +202,7 @@
         private Button btnStart;
         private Button btnRestart;
         private System.Windows.Forms.Timer Gravity;
+        private Label lblControls;
+        private Label lblHighScore;
     }
 }
