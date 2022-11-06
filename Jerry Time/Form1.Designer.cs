@@ -38,6 +38,7 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
+            this.Gravity = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.myBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BottomSquare)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopSquare)).BeginInit();
@@ -48,6 +49,7 @@
             this.myBox.BackColor = System.Drawing.Color.Transparent;
             this.myBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myBox.Image = global::Jerry_Time.Properties.Resources.Smiley;
+            this.myBox.InitialImage = null;
             this.myBox.Location = new System.Drawing.Point(357, 203);
             this.myBox.Name = "myBox";
             this.myBox.Size = new System.Drawing.Size(60, 60);
@@ -112,7 +114,7 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.Transparent;
             this.btnStart.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStart.Location = new System.Drawing.Point(200, 135);
+            this.btnStart.Location = new System.Drawing.Point(200, 335);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(373, 169);
             this.btnStart.TabIndex = 5;
@@ -132,10 +134,15 @@
             this.btnRestart.UseVisualStyleBackColor = false;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
+            // Gravity
+            // 
+            this.Gravity.Tick += new System.EventHandler(this.Gravity_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 440);
             this.Controls.Add(this.btnRestart);
@@ -148,6 +155,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.myBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BottomSquare)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopSquare)).EndInit();
@@ -167,5 +176,6 @@
         private Label lblScore;
         private Button btnStart;
         private Button btnRestart;
+        private System.Windows.Forms.Timer Gravity;
     }
 }

@@ -13,7 +13,17 @@ namespace Jerry_Time
         int TBCord;
         int Distance;
         int Score = 0;
+
+        Bitmap bmpSmile = new Bitmap("..\\..\\..\\Resources\\Smiley.png");
+        Bitmap bmpUnSmile = new Bitmap ("..\\..\\..\\Resources\\UnSmiley.png");
         
+        //public SpaceBarPress()
+        //{
+
+
+        //    return;
+        //}
+
         public Form1()
         {
             InitializeComponent();
@@ -61,8 +71,8 @@ namespace Jerry_Time
         {
 
             //https://social.msdn.microsoft.com/Forums/en-US/2b815e39-da66-49dd-94b9-13384e424f3e/c-object-following-the-mouse?forum=csharplanguage
-            Point mouse = PointToClient(MousePosition);
-            myBox.Location = new Point(mouse.X - 30, mouse.Y - 30);
+            //Point mouse = PointToClient(MousePosition);
+            //myBox.Location = new Point(mouse.X - 30, mouse.Y - 30);
 
 
             //https://stackoverflow.com/questions/33846662/c-sharp-detect-picturebox-overlap
@@ -86,6 +96,8 @@ namespace Jerry_Time
 
                 btnRestart.Visible = true;
                 btnRestart.Enabled = true;
+
+                myBox.Image = bmpUnSmile;
             }
 
             if (overlapBottom == true)
@@ -97,6 +109,8 @@ namespace Jerry_Time
 
                 btnRestart.Visible = true;
                 btnRestart.Enabled = true;
+
+                myBox.Image = bmpUnSmile;
             }
 
             if (Distance < 85)
@@ -109,6 +123,10 @@ namespace Jerry_Time
                 BottomSquare.Top -= 20;
             }
 
+            if (Score >= 100)
+            {
+                MessageBox.Show("Get a life");
+            }
 
 
         }
@@ -126,6 +144,9 @@ namespace Jerry_Time
             Collision.Enabled = true;
             Collision.Interval = 1;
 
+            Gravity.Enabled = true;
+            Gravity.Interval = 2;
+
             btnStart.Enabled = false;
             btnStart.Visible = false;
         }
@@ -141,11 +162,32 @@ namespace Jerry_Time
             Collision.Enabled = true;
             Collision.Interval = 1;
 
+            Gravity.Enabled = true;
+            Gravity.Interval = 2;
+
             btnRestart.Enabled = false;
             btnRestart.Visible = false;
 
             Score = 0;
             lblScore.Text = "Score: " + Score.ToString();
+
+            myBox.Image = bmpSmile;
+            myBox.Location = new Point(357, 203);
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            myBox.Top -= 30;
+        }
+
+        private void Gravity_Tick(object sender, EventArgs e)
+        {
+            myBox.Top += 1;
         }
     }
 }
